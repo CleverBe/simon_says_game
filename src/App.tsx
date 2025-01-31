@@ -139,7 +139,6 @@ export default function App() {
           />
         ))}
       </div>
-      {JSON.stringify({ sequence, userInput })}
       <GameModal
         ref={dialogRef}
         isPlaying={isPlaying}
