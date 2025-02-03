@@ -1,13 +1,13 @@
 import { forwardRef } from "react";
 
-export interface ProjectModalProps {
+export interface GameModalProps {
   isPlaying: boolean;
   score: number;
   isFirstRender: boolean;
   startGame: () => void;
 }
 
-export const GameModal = forwardRef<HTMLDialogElement, ProjectModalProps>(
+export const GameModal = forwardRef<HTMLDialogElement, GameModalProps>(
   (props, ref) => {
     const { isPlaying, score, isFirstRender, startGame } = props;
 
