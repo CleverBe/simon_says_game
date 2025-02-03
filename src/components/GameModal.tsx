@@ -14,9 +14,9 @@ export const GameModal = forwardRef<HTMLDialogElement, ProjectModalProps>(
     return (
       <dialog
         ref={ref}
-        className="rounded-md z-10 backdrop:bg-gray-800/50 w-[200px] bg-gray-300"
+        className="z-10 w-[200px] rounded-md bg-gray-300 backdrop:bg-gray-800/50"
       >
-        <div className="p-4 flex flex-col gap-4 items-center justify-center">
+        <div className="flex flex-col items-center justify-center gap-4 p-4">
           <div className="text-pretty text-center">
             {isFirstRender ? (
               <>
@@ -28,7 +28,7 @@ export const GameModal = forwardRef<HTMLDialogElement, ProjectModalProps>(
             )}
           </div>
           <button
-            className="w-36 text-xl h-28 px-4 py-2 bg-green-500 rounded hover:bg-green-600 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="h-28 w-36 rounded bg-green-500 px-4 py-2 text-xl hover:bg-green-600 disabled:cursor-not-allowed disabled:opacity-50"
             onClick={startGame}
             disabled={isPlaying}
           >
@@ -37,5 +37,5 @@ export const GameModal = forwardRef<HTMLDialogElement, ProjectModalProps>(
         </div>
       </dialog>
     );
-  }
+  },
 );

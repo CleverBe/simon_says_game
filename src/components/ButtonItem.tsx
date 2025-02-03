@@ -20,10 +20,12 @@ export const ButtonItem = ({
   return (
     <button
       className={cn(
-        "w-full h-full rounded-md text-white p-3 border-2 border-transparent",
+        "h-full w-full rounded-md border-2 border-transparent p-3 text-white",
         buttonColors[button as keyof typeof buttonColors],
         activeButton === button ? "opacity-100" : "opacity-40",
-        isPlaying && !disabledButtons ? "cursor-pointer hover:border-white" : ""
+        isPlaying && !disabledButtons
+          ? "cursor-pointer hover:border-white"
+          : "",
       )}
       onClick={() => handleButtonClick(button)}
       disabled={disabledButtons}

@@ -124,9 +124,9 @@ export default function App() {
     isShowingSequence || !isPlaying || sequence.length === userInput.length;
 
   return (
-    <div className="h-screen bg-gray-900 text-white flex flex-col items-center justify-center">
+    <div className="flex h-screen flex-col items-center justify-center bg-gray-900 text-white">
       <Header score={currentScore} record={getRecord()} />
-      <div className="size-64 sm:size-96 grid grid-cols-2 gap-4 mx-auto place-items-center p-4">
+      <div className="mx-auto grid size-64 grid-cols-2 place-items-center gap-4 p-4 sm:size-96">
         {buttons.map((button) => (
           <ButtonItem
             key={button}
